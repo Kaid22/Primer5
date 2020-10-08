@@ -16,5 +16,38 @@ namespace Primer5
         {
             InitializeComponent();
         }
+        //ovo je komentar
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int a,b;
+                a = int.Parse(textBox1.Text);
+                b = int.Parse(textBox2.Text);
+                int rez = a * a - b * b;
+                textBox3.Text = rez.ToString();
+            }
+            catch(Exception izuzetak)
+            {
+                MessageBox.Show(izuzetak.Message, "GRESKA");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int a, b;
+                a = int.Parse(textBox1.Text);
+                b = int.Parse(textBox2.Text);
+                int rez = (a-b) *(a-b);
+                textBox3.Text = rez.ToString();
+            }
+            catch (Exception izuzetak)
+            {
+                MessageBox.Show(izuzetak.Message, "GRESKA");
+            }
+        }
     }
 }
